@@ -1,0 +1,103 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+}
+.box{
+    position: relative;
+    width: 300px;
+    height: 380px;
+    background-color: #000;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.box::before{
+    position: absolute;
+    content: '';
+    top: -50%;
+    left: -50%;
+    width: 300px;
+    height: 350px;
+    background: linear-gradient(0deg,transparent,#45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate 
+{
+    0% 
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.box::after{
+    position: absolute;
+    content: '';
+    top: -50%;
+    left: -50%;
+    width: 300px;
+    height: 350px;
+    background: linear-gradient(0deg,transparent,#d10f97);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.card{
+    position: absolute;
+    background: #222020;
+    z-index: 10;
+    inset: 5px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.card h1{
+    color: #45f3ff;
+    text-align: center;
+    font-family: sans-serif;
+}
+.card input{
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 2px solid white;
+}
+.card a{
+    /* display: block; */
+    margin: 10px;
+    color: blue;
+    /* text-decoration: none; */
+}
+
+.card span{
+    color: #fff;
+}
+
+button{
+    margin: 30px 0px 10px 60px;
+    padding: 10px 40px;
+    border-radius: 20px;
+    background-color: #45f3ff;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #000;
+    color: #fff;
+    transition: .5s;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+
